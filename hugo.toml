@@ -1,0 +1,74 @@
+title = "AJ Morris"
+baseURL = 'https://ajmorris.github.io/personal_website/'
+
+languageCode = 'en-us'
+defaultContentLanguage = "en"
+
+enableEmoji = true
+ignoreErrors = ["additional-script-loading-error"]
+
+theme = "hugo-blog-awesome"
+
+[services]
+  [services.googleAnalytics]
+    id = ''
+  [services.disqus]
+    shortname = ''
+
+[markup]
+  [markup.highlight]
+    noClasses = false
+  [markup.goldmark.renderer]
+    unsafe = true
+  [markup.tableOfContents]
+    startLevel = 2
+    endLevel = 4
+    ordered = false
+
+[menu]
+  [[menu.main]]
+    pageRef = "/"
+    name = 'Home'
+    url = '/'
+    weight = 10
+  [[menu.main]]
+    pageRef = "posts"
+    name = 'Posts'
+    url = '/posts/'
+    weight = 20
+  [[menu.main]]
+    pageRef = "about"
+    name = 'About'
+    url = '/about/'
+    weight = 30
+
+[params]
+  sitename = "AJ Morris"
+  defaultColor = "auto"
+  description = "Personal website and blog"
+  mainSections = ['posts']
+  toc = true
+  tocOpen = false
+  goToTop = true
+  dateFormat = ""
+  rssFeedDescription = "summary"
+
+[params.author]
+  intro = "AJ Morris"
+  name = "AJ Morris"
+  description = "Personal website and blog"
+
+[params.webmanifest]
+  name = "AJ Morris"
+  short_name = "AJ Morris"
+  start_url = "/"
+  theme_color = "#434648"
+  background_color = "#fff"
+  display = "standalone"
+
+[params.browserconfig]
+  TileColor = "#2d89ef"
+
+[[params.socialIcons]]
+  name = "github"
+  url = "https://github.com/ajmorris"
