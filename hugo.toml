@@ -58,6 +58,12 @@ theme = "hugo-blog-awesome"
   name = "AJ Morris"
   description = "Personal website and blog"
 
+[params.subscribe]
+  heading = "Subscribe"
+  description = "One weekly email to help you grow as a leader, stay aligned with what drives you, and systematize how you show up."
+  formAction = "https://app.kit.com/forms/1868347/subscriptions"
+  button = "Join Newsletter"
+
 [params.webmanifest]
   name = "AJ Morris"
   short_name = "AJ Morris"

@@ -1,0 +1,23 @@
+{{- $subscribe := .Site.Params.subscribe -}}
+{{- $heading := $subscribe.heading | default "Subscribe" -}}
+{{- $description := $subscribe.description | default "" -}}
+{{- $action := $subscribe.formAction | default "" -}}
+{{- $button := $subscribe.button | default "Join Newsletter" -}}
+<section class="subscribe" aria-labelledby="subscribe-heading">
+    <h3 id="subscribe-heading" class="subscribe-heading">{{ $heading }}</h3>
+    {{- with $description }}
+    <p class="subscribe-copy">{{ . }}</p>
+    {{- end }}
+    <svg class="subscribe-arrow" viewBox="0 0 150 168" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+        <path d="M68 10 C 76 22, 98 16, 112 32 C 128 50, 118 68, 98 76 C 74 86, 54 76, 50 96 C 46 114, 70 110, 78 122" stroke-width="12"/>
+        <path d="M40 114 C 54 132, 66 150, 80 162" stroke-width="12"/>
+        <path d="M120 108 C 110 128, 96 148, 80 162" stroke-width="11"/>
+    </svg>
+    {{- if $action }}
+    <form class="subscribe-form" action="{{ $action }}" method="post">
+        <label class="subscribe-label" for="subscribe-email">Email address</label>
+        <input id="subscribe-email" name="email_address" type="email" autocomplete="email" placeholder="Email Address" required>
+        <button type="submit">{{ $button }}</button>
+    </form>
+    {{- end }}
+</section>
